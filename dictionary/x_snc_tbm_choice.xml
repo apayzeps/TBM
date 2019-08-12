@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="TBM Choice" max_length="40" name="x_snc_tbm_choice" type="collection">
+        <element label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="TBM Level" max_length="32" name="level" reference="x_snc_tbm_levels" type="reference"/>
+        <element label="Level Number" max_length="40" name="level_number" type="integer"/>
+        <element display="true" label="Value" max_length="40" name="value" type="string"/>
+        <index name="index">
+            <element name="level"/>
+        </index>
+    </element>
+</database>

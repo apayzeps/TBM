@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="TBM List" max_length="40" name="x_snc_tbm_main" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Service Category" max_length="32" name="service_category" reference="x_snc_tbm_choice" reference_qual="level_number=2^EQ" reference_qual_condition="level_number=2^EQ" type="reference"/>
+        <element label="Service Name" max_length="32" name="service_name" reference="x_snc_tbm_choice" reference_qual="level_number=3^EQ" reference_qual_condition="level_number=3^EQ" type="reference"/>
+        <element label="Service Offering" max_length="32" name="service_offering" reference="x_snc_tbm_choice" reference_qual="level_number=4^EQ" reference_qual_condition="level_number=4^EQ" type="reference"/>
+        <element label="Service Type" max_length="32" name="service_type" reference="x_snc_tbm_choice" reference_qual="level_number=1^EQ" reference_qual_condition="level_number=1^EQ" type="reference"/>
+        <element choice="1" display="true" label="Sub-Service offering" max_length="75" name="sub_service_offering" reference="x_snc_tbm_choice" reference_qual="level=f76f3a10dbdb7b401771f7b51d961943^EQ" reference_qual_condition="level=f76f3a10dbdb7b401771f7b51d961943^EQ" type="reference">
+            <choice/>
+        </element>
+        <index name="index">
+            <element name="service_type"/>
+        </index>
+        <index name="index2">
+            <element name="service_name"/>
+        </index>
+        <index name="index3">
+            <element name="service_category"/>
+        </index>
+        <index name="index4">
+            <element name="service_offering"/>
+        </index>
+    </element>
+</database>
