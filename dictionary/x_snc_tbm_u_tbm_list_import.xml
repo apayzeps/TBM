@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="sys_import_set_row" label="U_tbm_list_import" max_length="40" name="x_snc_tbm_u_tbm_list_import" type="collection">
-        <element attributes="import_attribute_name=Service Category,edge_encryption_enabled=true" label="Service Category" max_length="40" name="u_service_category" type="string"/>
-        <element attributes="import_attribute_name=Service Name,edge_encryption_enabled=true" label="Service Name " max_length="40" name="u_service_name" type="string"/>
-        <element attributes="import_attribute_name=Service Offering,edge_encryption_enabled=true" label="Service Offering" max_length="61" name="u_service_offering" type="string"/>
-        <element attributes="import_attribute_name=Service Type,edge_encryption_enabled=true" label="Service Type " max_length="40" name="u_service_type" type="string"/>
-        <element attributes="import_attribute_name=Sub-Service Offering,edge_encryption_enabled=true" label="Sub-Service Offering" max_length="61" name="u_sub_service_offering" type="string"/>
-    </element>
-</database>

@@ -18,6 +18,9 @@
             <element name="service_category"/>
         </index>
         <index name="index4">
+            <element name="sub_service_offering"/>
+        </index>
+        <index name="index5">
             <element name="service_offering"/>
         </index>
     </element>

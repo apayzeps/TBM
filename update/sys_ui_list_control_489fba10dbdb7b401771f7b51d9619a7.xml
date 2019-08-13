@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_list_control">
     <sys_ui_list_control action="INSERT_OR_UPDATE">
         <columns_condition/>
-        <disable_listv3>false</disable_listv3>
         <edit_condition/>
         <edit_default_filter/>
         <edit_roles/>
@@ -15,7 +14,6 @@
         <list_edit_insert_row>true</list_edit_insert_row>
         <list_edit_ref_qual_tag/>
         <list_edit_type/>
-        <mode>grid</mode>
         <name>x_snc_tbm_choice</name>
         <new_condition/>
         <new_roles/>
@@ -27,7 +25,6 @@
         <omit_links>false</omit_links>
         <omit_new_button>false</omit_new_button>
         <related_list/>
-        <search_method>keywords</search_method>
         <sys_class_name>sys_ui_list_control</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-08-12 12:46:52</sys_created_on>

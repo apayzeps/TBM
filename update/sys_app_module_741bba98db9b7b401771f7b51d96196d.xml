@@ -19,25 +19,23 @@
         <query/>
         <report/>
         <roles>x_snc_tbm.tbm_choice_user</roles>
-        <survey/>
-        <survey_overwrite>true</survey_overwrite>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-08-12 12:27:12</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>741bba98db9b7b401771f7b51d96196d</sys_id>
-        <sys_mod_count>5</sys_mod_count>
-        <sys_name>Create / Update TBM Items</sys_name>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>TBM Create Choice Values</sys_name>
         <sys_overrides/>
         <sys_package display_value="Technology Business Management" source="x_snc_tbm">b1bab218db9b7b401771f7b51d9619f9</sys_package>
         <sys_policy/>
         <sys_scope display_value="Technology Business Management">b1bab218db9b7b401771f7b51d9619f9</sys_scope>
         <sys_update_name>sys_app_module_741bba98db9b7b401771f7b51d96196d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-08-12 17:31:19</sys_updated_on>
+        <sys_updated_on>2019-08-13 10:31:43</sys_updated_on>
         <timeline_page/>
-        <title>Create / Update TBM Items</title>
+        <title>TBM Create Choice Values</title>
         <uncancelable>false</uncancelable>
         <view_name/>
         <window_name/>

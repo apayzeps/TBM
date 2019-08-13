@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="sys_import_set_row" label="U_tbm_Choice" max_length="40" name="x_snc_tbm_u_tbm_choice" type="collection">
-        <element attributes="import_attribute_name=Level,edge_encryption_enabled=true" label="Level" max_length="40" name="u_level" type="string"/>
-        <element attributes="import_attribute_name=Level Number" label="Level Number" max_length="40" name="u_level_number" type="integer"/>
-        <element attributes="import_attribute_name=Value,edge_encryption_enabled=true" label="Value" max_length="61" name="u_value" type="string"/>
-    </element>
-</database>

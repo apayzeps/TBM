@@ -53,15 +53,15 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-08-12 12:36:36</sys_created_on>
-        <sys_id>5c1df65cdb9b7b401771f7b51d9619ec</sys_id>
+        <sys_id>8d2840e4db133300e768fbef2996197c</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Active</sys_name>
         <sys_package display_value="Technology Business Management" source="x_snc_tbm">b1bab218db9b7b401771f7b51d9619f9</sys_package>
         <sys_policy/>
         <sys_scope display_value="Technology Business Management">b1bab218db9b7b401771f7b51d9619f9</sys_scope>
         <sys_update_name>sys_dictionary_x_snc_tbm_choice_active</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-08-12 12:36:36</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2019-08-12 18:03:55</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
