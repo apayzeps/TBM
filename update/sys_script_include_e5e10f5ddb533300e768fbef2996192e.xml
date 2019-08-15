@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_tbm.StakeHolderRegisterTBM</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>StakeHolderRegisterTBM</name>
+        <script><![CDATA[var StakeHolderRegisterTBM = Class.create();
+StakeHolderRegisterTBM.prototype = {
+    initialize: function(m2mTable, entity) {
+		this.m2mTable = m2mTable;
+		this.entity = entity;
+		this.stakeHolderRegisterTable = 'dmn_stakeholder_register';
+    },
+	
+	deleteStakeHolders : function(tbm, taskId) {
+		var stakeHolderList = "";
+		var m2mGR;
+		var gr = new GlideRecord(this.stakeHolderRegisterTable);
+		gr.addQuery('u_tbm', tbm);
+		gr.query();
+
+		if (gr.hasNext()) {
+			m2mGR = new GlideRecord(this.m2mTable);
+			while(gr.next()) {
+				stakeHolderList += gr.getUniqueValue();
+				stakeHolderList += ",";
+			}
+			m2mGR.addQuery('stakeholder', 'IN', stakeHolderList);
+			m2mGR.addQuery(this.entity, taskId);
+			m2mGR.addQuery('auto', true);
+			m2mGR.deleteMultiple();
+		}
+	},
+	
+	deleteAllStakeHoldersInM2M : function(projId) {
+		var m2mGr = new GlideRecord(this.m2mTable);
+		m2mGr.addQuery(this.entity, projId);
+		m2mGr.deleteMultiple();
+	},
+	
+	stakeholderExistsForTask : function(userId, tbm, taskId) {
+		var m2mGR = new GlideRecord(this.m2mTable);
+		m2mGR.addQuery('stakeholder.u_tbm', tbm);
+		m2mGR.addQuery('stakeholder.user', userId);
+		m2mGR.addQuery(this.entity, taskId);
+		m2mGR.query();
+		return m2mGR.getRowCount() !== 0 ? true : false;
+	},
+	
+	addStakeHolders : function(tbm, taskId) {
+		// Add new stakeholders for the current TBM
+		var gr = new GlideRecord(this.stakeHolderRegisterTable);
+		gr.addQuery('u_tbm', tbm);
+		gr.addQuery('active', true);
+		gr.query();
+		while(gr.next()) {
+			if(this.stakeholderExistsForTask(gr.user, tbm, taskId))
+				continue;
+			
+			var newM2MGr = new GlideRecord(this.m2mTable);
+			newM2MGr.initialize();
+			newM2MGr[this.entity] = taskId;
+			newM2MGr.stakeholder = gr.getUniqueValue();
+			newM2MGr.auto = true;
+			newM2MGr.insert();
+		}
+	},
+	
+	syncStakeHolderFields : function(m2mGr) {
+		m2mGr.engagement = m2mGr.stakeholder.engagement;
+		m2mGr.influence = m2mGr.stakeholder.influence;
+		m2mGr.interest = m2mGr.stakeholder.interest;
+		m2mGr.assessment = m2mGr.stakeholder.assessment;
+		m2mGr.approver = m2mGr.stakeholder.approver;
+		m2mGr.expectation = m2mGr.stakeholder.expectation;
+	},
+	
+	copyStakeHoldersFromDemandToProject : function(projId, dmn_m2mGr) {
+		var pm_m2mGR = new GlideRecord(this.m2mTable);
+		pm_m2mGR.initialize();
+		pm_m2mGR[this.entity] = projId;
+		pm_m2mGR.stakeholder = dmn_m2mGr.stakeholder;
+		pm_m2mGR.auto = dmn_m2mGr.auto;
+		pm_m2mGR.engagement = dmn_m2mGr.engagement;
+		pm_m2mGR.influence = dmn_m2mGr.influence;
+		pm_m2mGR.interest = dmn_m2mGr.interest;
+		pm_m2mGR.assessment = dmn_m2mGr.assessment;
+		pm_m2mGR.approver = dmn_m2mGr.approver;
+		pm_m2mGR.expectation = dmn_m2mGr.expectation;
+		pm_m2mGR.setWorkflow(false);
+		pm_m2mGR.insert();
+	},
+
+    type: 'StakeHolderRegisterTBM'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-15 15:32:29</sys_created_on>
+        <sys_id>e5e10f5ddb533300e768fbef2996192e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>StakeHolderRegisterTBM</sys_name>
+        <sys_package display_value="Technology Business Management" source="x_snc_tbm">b1bab218db9b7b401771f7b51d9619f9</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Technology Business Management">b1bab218db9b7b401771f7b51d9619f9</sys_scope>
+        <sys_update_name>sys_script_include_e5e10f5ddb533300e768fbef2996192e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-15 15:34:57</sys_updated_on>
+    </sys_script_include>
+</record_update>

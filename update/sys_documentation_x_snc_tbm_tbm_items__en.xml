@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="" label="TBM_Items" language="en" table="x_snc_tbm_tbm_items">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>TBM_Items</label>
+            <language>en</language>
+            <name>x_snc_tbm_tbm_items</name>
+            <plural>TBM_Items</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-08-13 12:08:59</sys_created_on>
+            <sys_id>ff70087cdb9f3300e768fbef2996190f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>TBM_Items</sys_name>
+            <sys_package display_value="Technology Business Management" source="x_snc_tbm">b1bab218db9b7b401771f7b51d9619f9</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Technology Business Management">b1bab218db9b7b401771f7b51d9619f9</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_tbm_tbm_items__en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-08-13 12:08:59</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
